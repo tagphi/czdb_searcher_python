@@ -212,7 +212,7 @@ class DbSearcher:
         self.column_selection = ByteUtil.get_int_long(data, 0)
 
         if self.column_selection == 0:
-            print("Column selection is 0, returning")
+            self.geo_map_data = None
             return
 
         geo_map_ptr = column_selection_ptr + 4
