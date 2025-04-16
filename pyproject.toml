@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "czdb-searcher"
+version = "0.1.0"
+authors = [
+    { name = "Liu Cong", email = "cong.liu@rtbasia.com" },
+]
+description = "A Python library for efficient IP geolocation lookup using CZDB database"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Internet",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "msgpack",
+    "pycryptodome",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/tagphi/czdb_searcher_python"
+"Bug Tracker" = "https://github.com/tagphi/czdb_searcher_python/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["czdb"] 
